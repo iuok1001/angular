@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bind.iml" filepath="$PROJECT_DIR$/bind.iml" />
+      <module fileurl="file://$PROJECT_DIR$/angular-js.iml" filepath="$PROJECT_DIR$/angular-js.iml" />
     </modules>
   </component>
 </project>
