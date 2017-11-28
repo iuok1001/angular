@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>lowercase</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.lowercase.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Converts the specified string to lowercase v1.0.3</h4>
+<div>
+    <p>名字：<input type="text" ng-model="myCtrl.name" ng-change="myCtrl.toLowercase()"/></p>
+    <h6>Hello {{myCtrl.name}}</h6>
+    <h6>Hello {{myCtrl.lowerName}}</h6>
+</div>
+</body>
+</html>

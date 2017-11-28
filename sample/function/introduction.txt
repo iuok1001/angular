@@ -1,0 +1,4 @@
+ng
+    function
+        angular.bind
+        angular.bootstrap
