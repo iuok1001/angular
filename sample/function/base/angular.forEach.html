@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>forEach</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.forEach.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Invokes the iterator function once for each item in obj collection, which can be either an object or an array.
+    The iterator function is invoked with iterator(value, key, obj), where value is the value of an object property or
+    an array element, key is the object property key or array element index and obj is the obj itself. Specifying a
+    context for the function is optional.</h4>
+<h5 style="color:red">
+    一次调用迭代器函数遍历obj集合的每一项,它可以是一个对象或数组。迭代器函数调用iterator(value、key、obj),其中value是一个对象属性或数组元素,key是对象属性键或数组元素索引,
+    obj是obj本身。函数的参数是可选的。</h5>
+
+<h4>It is worth noting that [.forEach] does not iterate over inherited properties because it filters using the
+    hasOwnProperty method.
+    Unlike ES262's Array.prototype.forEach, providing 'undefined' or 'null' values for obj will not throw a TypeError,
+    but rather just return the value provided.</h4>
+
+<h5 style="color:red">值得注意的是[.forEach]不迭代继承的属性,因为它使用hasOwnProperty过滤器的方法。[object.hasOwnProperty(proName);
+    判断proName的名称是不是object对象的一个属性或对象。]
+    不像ES262 Array.prototype.forEach,提供“undefined”或“null”值obj不会抛出一个TypeError,而是仅仅提供返回值。</h5>
+
+<div>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toForEach()" value="点击遍历"/></p>
+</div>
+</body>
