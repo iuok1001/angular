@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>isXXX</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.isXXX.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Determines if a reference is XXX</h4>
+<h5 style="color:red">
+    判断元素是相关类型</h5>
+<div id="isDiv">
+    <h5>
+        实例一：angular.isUndefined</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsUndefined()" value="点击执行"/></p>
+    <h5>
+        实例二：angular.isDefined</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsDefined()" value="点击执行"/></p>
+    <h5>
+        实例三：angular.isObject</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsObject()" value="点击执行"/></p>
+    <h5>
+        实例四：angular.isString</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsString()" value="点击执行"/></p>
+    <h5>
+        实例五：angular.isNumber</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsNumber()" value="点击执行"/></p>
+    <h5>
+        实例六：angular.isDate</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsDate()" value="点击执行"/></p>
+    <h5>
+        实例七：angular.isArray</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsArray()" value="点击执行"/></p>
+    <h5>
+        实例八：angular.isFunction</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsFunction()" value="点击执行"/></p>
+    <h5>
+        实例九：angular.isElement 决定是否一个DOM元素的引用(或包裹jQuery元素)。</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIsElement()" value="点击执行"/></p>
+</div>
+</body>
