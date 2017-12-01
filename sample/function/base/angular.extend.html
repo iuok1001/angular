@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>extend</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.extend.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Extends the destination object dst by copying own enumerable properties from the src object(s) to dst. You can
+    specify multiple src objects. If you want to preserve original objects, you can do so by passing an empty object as
+    the target: var object = angular.extend({}, object1, object2).</h4>
+<h5 style="color:red">
+    通过拷贝src的自身枚举属性来拓展目标对象dst，如果你想保留原来的对象,可以通过传递一个空对象作为目标对象</h5>
+
+<h4> Keep in mind that angular.extend does not support recursive merge (deep copy). Use angular.merge for this.</h4>
+
+<h5 style="color:red">angular.extend 不支持递归合并（深拷贝）. 可以使用 angular.merge 来实现.</h5>
+
+<div>
+    <h5>实例一：var r = angular.extend(b, a);将对象a的第一层属性（不管是简单属性还是对象）拷贝赋给对象b的第一层属性，即如果是对象，则是引用的是同一个对象，并返回对象b</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toExtend1()" value="点击拷贝1"/></p>
+    <h5>实例二：var r = angular.extend(b, a, z);相继将对象a、z的第一层属性（不管是简单属性还是对象）拷贝赋给对象b的第一层属性，即如果是对象，则是引用的是同一个对象，并返回对象b</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toExtend2()" value="点击拷贝2"/></p>
+</div>
+</body>
