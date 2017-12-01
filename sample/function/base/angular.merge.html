@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>merge</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.merge.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h3>Deprecated: (since 1.6.5)
+    This function is deprecated, but will not be removed in the 1.x lifecycle. There are edge cases (see known issues)
+    that are not supported by this function. We suggest using lodash's merge() instead.</h3>
+<h5 style="color:red">
+    弃用(从1.6.5):这个函数是弃用,但在1.x版本中不会被删除。有边界情况(见已知问题),不支持此功能。我们建议使用lodash's merge()代替此函数。</h5>
+
+<h4>Deeply extends the destination object dst by copying own enumerable properties from the src object(s) to dst. You
+    can specify multiple src objects. If you want to preserve original objects, you can do so by passing an empty object
+    as the target: var object = angular.merge({}, object1, object2).</h4>
+<h5 style="color:red">
+    通过拷贝src的自身枚举属性来拓展目标对象dst，如果你想保留原来的对象,可以通过传递一个空对象作为目标对象</h5>
+
+<h4> Unlike extend(), merge() recursively descends into object properties of source objects, performing a deep
+    copy.Known Issues
+    This is a list of (known) object types that are not handled correctly by this function:
+    Blob
+    MediaStream
+    CanvasGradient
+    AngularJS scopes;</h4>
+
+<h5 style="color:red">angular.merge 支持递归合并（深拷贝）。但是，存在一些已知的问题点：。。。</h5>
+
+<div>
+    <h5>实例一：var r = angular.merge(b, a);在merge中，会将两个源中的对象都拷贝，如果两个源中存在相同对象，并且相同对象中存在相同key，key对应的值会被后者覆盖，并返回对象b</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toMerge1()" value="点击深拷贝1"/></p>
+    <h5>实例二：var r = angular.merge(b, a, z);</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toMerge2()" value="点击深拷贝2"/></p>
+</div>
+</body>

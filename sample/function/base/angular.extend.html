@@ -19,8 +19,8 @@
 
 <div>
     <h5>实例一：var r = angular.extend(b, a);将对象a的第一层属性（不管是简单属性还是对象）拷贝赋给对象b的第一层属性，即如果是对象，则是引用的是同一个对象，并返回对象b</h5>
-    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toExtend1()" value="点击拷贝1"/></p>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toExtend1()" value="点击浅拷贝1"/></p>
     <h5>实例二：var r = angular.extend(b, a, z);相继将对象a、z的第一层属性（不管是简单属性还是对象）拷贝赋给对象b的第一层属性，即如果是对象，则是引用的是同一个对象，并返回对象b</h5>
-    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toExtend2()" value="点击拷贝2"/></p>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toExtend2()" value="点击浅拷贝2"/></p>
 </div>
 </body>
