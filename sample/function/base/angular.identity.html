@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>identity</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.identity.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>A function that performs no operations. This function can be useful when writing code in the functional style.</h4>
+<h5 style="color:red">
+    函数返回本身的第一个参数。这个函数一般用于函数风格。</h5>
+<div>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toIdentity()" value="点击执行"/></p>
+</div>
+</body>

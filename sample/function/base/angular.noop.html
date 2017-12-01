@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>noop</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.noop.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>A function that performs no operations. This function can be useful when writing code in the functional style.</h4>
+<h5 style="color:red">
+    一个不执行任何操作的空函数。这个函数一般用于函数风格。</h5>
+<div>
+    <h5>
+        实例一：根据上面写的demo的代码及运行结果来看，感觉他们的作用是用来防止函数传入的是null或者undefined或者其他不能操作的
+        对象。因为如果去掉这两个后，你在函数调用的时候传入null/undefined/或者其他不能执行的对象，那么控制台是直接报错的...</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toNoop()" value="点击执行"/></p>
+</div>
+</body>
