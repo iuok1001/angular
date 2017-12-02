@@ -17,8 +17,8 @@ app.controller('MyCtrl', function () {
         console.log('b:' + JSON.stringify(b));
         console.log('r:' + JSON.stringify(r));
 
-        b.address = 'hanzhou';
-        b.family.amount = '180W';
+        a.address = 'hanzhou';
+        a.family.amount = '190W';
         console.log('a:' + JSON.stringify(a));
         console.log('b:' + JSON.stringify(b));
         console.log('r:' + JSON.stringify(r));

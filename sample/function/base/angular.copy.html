@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>copy</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.copy.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Creates a deep copy of source, which should be an object or an array.
+    <br>
+    ·If no destination is supplied, a copy of the object or array is created.<br>
+    ·If a destination is provided, all of its elements (for arrays) or properties (for objects) are deleted and then all
+    elements/properties from the source are copied to it.<br>
+    ·If source is not an object or array (inc. null and undefined), source is returned.<br>
+    ·If source is identical to destination an exception will be thrown.<br></h4>
+<h5 style="color:red">创建深拷贝，可以是一个对象或者是一个数组</h5>
+
+<h4>·如果目标对象没有提供，一个复制对象或数组会创建<br>
+·如果目标对象提供，所有的元素对象属性将被删除，并且将被源对象覆盖<br>
+·如果源对象不是一个对象或者数组（包含null或undefined）源对象将会被返回<br>
+·如果源对象和目标对象是同一个，那么将抛出一个异常<br>
+使用方法：angular.copy(source, [destination]);
+</h4>
+
+<div>
+    <h5>实例一：</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toCopy()" value="点击拷贝"/></p>
+</div>
+</body>
