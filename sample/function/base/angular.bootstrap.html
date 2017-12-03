@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.bootstrap.js"></script>
+</head>
+<body ng-controller="MyCtrl">
+<h4>Angular will detect if it has been loaded into the browser more than once and only allow the first loaded script to
+    be bootstrapped and will report a warning to the browser console for each of the subsequent scripts. This prevents
+    strange results in applications, where otherwise multiple instances of Angular try to work on the DOM.</h4>
+<h5 style="color:red">Angular将检测是否已经加载到浏览器中不止一次,只允许第一个要引导加载脚本并将报告警告浏览器控制台为每个后续的脚本。
+    为了防止奇怪的结果被呈现</h5>
+<h5>Note: Protractor based end-to-end tests cannot use this function to bootstrap manually. They must use ngApp.</h5>
+<h4>注意点：当你手动启动你的应用程序的时候，你是不可以再去使用 ng-app 指令的
+</h4>
+<h5>Note: Do not bootstrap the app on an element with a directive that uses transclusion, such as ngIf, ngInclude and
+    ngView. Doing this misplaces the app $rootElement and the app's injector, causing animations to stop working and
+    making the injector inaccessible from outside the app.</h5>
+<h5 style="color:red">注意点：不要手动启用app[存在使用transclusion命令的页面]</h5>
+
+<h4>使用方法：angular.toJson(obj, pretty); pretty如果设置[true], 则以空格以及换行的形式展示</h4>
+
+<div>
+    <h5>实例一：</h5>
+    <p>{{name}}</p>
+    <p>{{name2}}</p>
+</div>
+</body>
+</html>
