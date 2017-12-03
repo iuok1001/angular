@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>element</title>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<textarea style="height: 900px; width: 1200px;">angular.element
+
+将DOM元素或者HTML字符串一包装成一个jQuery元素。
+
+格式：angular.element(element);
+
+element：包装成jquery对象的html字符串或者dom元素
+
+jqLite提供的方法：
+·addClass()
+·after()
+·append()
+·attr()
+·bind() – 不支持命名空间,选择器和事件数据
+·children() – 不支持选择器
+·clone()
+·contents()
+·css()
+·data()
+·empty()
+·eq()
+·find() – 限定通过标签名称查找
+·hasClass()
+·html()
+·next() – 不支持选择器
+·on() – 不支持命名空间或选择器
+·off() –不支持命名空间或选择器
+·one() – 不支持命名空间或选择器
+·parent() – 不支持选择器
+·prepend()
+·prop()
+·ready()
+·remove()
+·removeAttr()
+·removeClass()
+·removeData()
+·replaceWith()
+·text()
+·toggleClass()
+·triggerHandler() -通过一个虚拟事件对象来处理。
+·unbind() – 不支持命名空间
+·val()
+·wrap()
+事件：
+
+$destory:当Dom被移除时， Angular 拦截所以的jqLite或者jquery Dom对象，销毁api和事件。这个事件能在Dom被移除前用来清除任何Dom上的相关。
+
+方法：
+
+controller(name)：检索当前元素或其父元素的controller，默认情况下，检索与ngController相关的controller，如果name是以驼峰模式命名的指令名称，那么这个指令的controller就是这样（如’ngModel’） 。
+
+injector():检索当前元素或其父元素的依赖注入。
+
+scope():检索当前元素或其父元素的scope。
+
+isolateScope():如果有一个scope直接附着在当前元素，检索一个隔离的scope，这仅用于元素包含一个创建了新的隔离的scope的指令，这个元素调用scope()总是返回原来的非隔离scope。
+
+inheritedData():和data()一样，但是会沿着Dom走直到值被找到或者走到顶级Dom元素。（由此可见，应该是向上传播的意思。）</textarea>
+
+<div>
+    <h5 style="color: red">实例一：如果页面中使用了jQuery和angular，那么一定要先加载jQuery框架，然后再加载angular</h5>
+    <div name="myDiv">Hello World!!!</div>
+    <input type="radio" id="radio1" checked="checked"  value="1"/>myDiv
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toElement()" value="点击查找元素" /></p>
+</div>
+<script src="../../../static/js/angular.js"></script>
+<script src="angular.element.js"></script>
+</body>
+</html>
