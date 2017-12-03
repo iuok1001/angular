@@ -17,7 +17,12 @@
     ngView. Doing this misplaces the app $rootElement and the app's injector, causing animations to stop working and
     making the injector inaccessible from outside the app.</h5>
 <h5 style="color:red">注意点：不要手动启用app[存在使用transclusion命令的页面],其次是引用js文件较之前有所不同，需后面引入</h5>
-
+<textarea style="width: 800px; height: 150px">
+angular.bootstrap(element, [modules], [config]);
+    ·element(必需)。要启动angular的根节点，一般为document，也可以是其他的的html的dom。
+    ·modules(数组，可选)。依赖的模块。
+    ·conifg(object,可选)。配置项，目前只有strictDi一个可配置项，默认为false,是否开启辅助debug。
+</textarea>
 <div id="div1" ng-controller="MyCtrl as myCtrl">
     <h5>实例一：</h5>
     <p>{{ name }}</p>

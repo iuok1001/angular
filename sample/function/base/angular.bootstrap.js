@@ -11,6 +11,6 @@ app2.controller('MyCtrl2', function ($scope) {
     vm.name2 = "222hello,World222!";
 });
 angular.element(document).ready(function() {
-    angular.bootstrap(document.getElementById('div1'), ['ngFunction']);
-    angular.bootstrap(document.getElementById('div2'), ['ngFunction2']);
+    angular.bootstrap(document.getElementById('div1'), ['ngFunction'], {strictDi:false});
+    angular.bootstrap(document.getElementById('div2'), ['ngFunction2'], {strictDi:false});
 });
