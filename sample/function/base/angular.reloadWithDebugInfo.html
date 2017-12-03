@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>reloadWithDebugInfo</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.reloadWithDebugInfo.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Use this function to reload the current application with debug information turned on. This takes precedence over a
+    call to $compileProvider.debugInfoEnabled(false).</h4>
+<h5 style="color:red">使用这个函数去加载当前应用通过debug模式。启用DebugInfo，该设置优先级高于$compileProvider.debugInfoEnabled(false)</h5>
+<div>
+    <h1 style="color:red">此功能暂时不做研究 2017-12-3 11:56:28</h1>
+    <h5>实例一：</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toReloadWithDebugInfo()" value="点击启用DebugInfo"/></p>
+</div>
+</body>
+</html>

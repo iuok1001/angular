@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>injector</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.injector.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Creates an injector object that can be used for retrieving services as well as for dependency injection</h4>
+<h5 style="color:red">创建一个注入元素，可用于检索服务和依赖注入</h5>
+<div>
+    <h5>实例一：</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toInjector()" value="点击注入"/></p>
+</div>
+</body>
+</html>
