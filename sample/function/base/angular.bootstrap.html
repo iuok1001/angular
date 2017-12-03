@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>bootstrap</title>
-    <script src="../../../static/js/angular.js"></script>
-    <script src="angular.bootstrap.js"></script>
 </head>
-<body ng-controller="MyCtrl">
+<body>
 <h4>Angular will detect if it has been loaded into the browser more than once and only allow the first loaded script to
     be bootstrapped and will report a warning to the browser console for each of the subsequent scripts. This prevents
     strange results in applications, where otherwise multiple instances of Angular try to work on the DOM.</h4>
@@ -18,14 +16,19 @@
 <h5>Note: Do not bootstrap the app on an element with a directive that uses transclusion, such as ngIf, ngInclude and
     ngView. Doing this misplaces the app $rootElement and the app's injector, causing animations to stop working and
     making the injector inaccessible from outside the app.</h5>
-<h5 style="color:red">注意点：不要手动启用app[存在使用transclusion命令的页面]</h5>
+<h5 style="color:red">注意点：不要手动启用app[存在使用transclusion命令的页面],其次是引用js文件较之前有所不同，需后面引入</h5>
 
-<h4>使用方法：angular.toJson(obj, pretty); pretty如果设置[true], 则以空格以及换行的形式展示</h4>
-
-<div>
+<div id="div1" ng-controller="MyCtrl as myCtrl">
     <h5>实例一：</h5>
-    <p>{{name}}</p>
-    <p>{{name2}}</p>
+    <p>{{ name }}</p>
+    <p>{{ myCtrl.name2 }}</p>
 </div>
+<div id="div2" ng-controller="MyCtrl2 as myCtrl">
+    <h5>实例一：</h5>
+    <p>{{ name }}</p>
+    <p>{{ myCtrl.name2 }}</p>
+</div>
+<script src="../../../static/js/angular.js"></script>
+<script src="angular.bootstrap.js"></script>
 </body>
 </html>
