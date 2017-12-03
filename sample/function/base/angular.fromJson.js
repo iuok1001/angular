@@ -1,0 +1,10 @@
+var app = angular.module('ngFunction', []);
+app.controller('MyCtrl', function () {
+    var vm = this;
+    vm.toJson = function () {
+        var obj = "{\"id\":3,\"measureUserName\":\"美女啊全是腿\",\"sex\":1,\"birthDay\":\"1991-01-04 08:00:00\",\"relation\":\"0\",\"telphone\":\"15205055673\",\"deviceSerial\":\"171110017843\",\"measureDetails\":[{\"id\":5,\"measureDataId\":3,\"foot\":1,\"len\":1,\"wid\":1,\"plantarGirth\":1,\"toeGirth\":1,\"tarsalGirth\":1,\"heelGirth\":1,\"ankleGirth\":1,\"ankleHei\":1,\"calcanealHei\":1,\"archHei\":1,\"footHei\":1,\"thumbHei\":1,\"pollexValgus\":1,\"iaoValgus\":1,\"externalAnkleHei\":1,\"pointHei\":1,\"fatDegreeType\":\"FAT_DEGREE_TYPE1\",\"fatDegreeTypeName\":\"标准\",\"footType\":\"FOOT_TYPE1\",\"footTypeName\":\"埃及脚\",\"archType\":\"ARCH_TYPE1\",\"archTypeName\":\"正常足\",\"footModelPath\":\"脚型扫描/商品列表/a1510053139479.jpg\",\"footmarkPath\":\"/measure-data-controller/footTypeListUsingGET\",\"volaPath\":\"/measure-data-controller/footTypeListUsingGET\"},{\"id\":6,\"measureDataId\":3,\"foot\":0,\"len\":1,\"wid\":1,\"plantarGirth\":1,\"toeGirth\":1,\"tarsalGirth\":1,\"heelGirth\":1,\"ankleGirth\":1,\"ankleHei\":1,\"calcanealHei\":1,\"archHei\":1,\"footHei\":1,\"thumbHei\":1,\"pollexValgus\":1,\"iaoValgus\":1,\"externalAnkleHei\":1,\"pointHei\":1,\"fatDegreeType\":\"FAT_DEGREE_TYPE1\",\"fatDegreeTypeName\":\"标准\",\"footType\":\"FOOT_TYPE1\",\"footTypeName\":\"埃及脚\",\"archType\":\"ARCH_TYPE1\",\"archTypeName\":\"正常足\",\"footModelPath\":\"脚型扫描/商品列表/timg - 副本 (2)1511784989656.gif\",\"footmarkPath\":\"/measure-data-controller/footTypeListUsingGET\",\"volaPath\":\"/measure-data-controller/footTypeListUsingGET\"}],\"shopName\":\"厦门一店\",\"userType\":0,\"address\":\"厦门市思明区望海路25号\",\"createTime\":\"2017-11-20 13:26:04\"}";
+        var temp = angular.fromJson(obj);
+        console.log(temp);
+        console.log(angular.toJson(temp, true));
+    };
+});

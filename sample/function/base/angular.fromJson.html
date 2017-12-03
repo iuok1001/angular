@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>fromJson</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.fromJson.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Deserializes a JSON string.</h4>
+<h5 style="color:red">JSON字符串返序列化</h5>
+<h5 style="color:red">内部实现原理</h5>
+<textarea style="width: 600px; height: 200px">
+function fromJson(json) {
+  return isString(json)
+      ? JSON.parse(json)
+      : json;
+}
+</textarea>
+
+<div>
+    <h5>实例一：</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toJson()" value="点击反序列化"/></p>
+</div>
+</body>
