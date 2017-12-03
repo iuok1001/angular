@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>toJson</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.toJson.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Serializes input into a JSON-formatted string. Properties with leading $$ characters will be stripped since angular
+    uses this notation internally.</h4>
+<h5 style="color:red">转换成JSON字符串，如果属性以$$字符开头，将会被剥夺，因为angular使用它作为内部符号，即无法输出</h5>
+<h4>Known Issues
+    The Safari browser throws a RangeError instead of returning null when it tries to stringify a Date object with an
+    invalid date value. The only reliable way to prevent this is to monkeypatch the Date.prototype.toJSON method as
+    follows:
+</h4>
+<h5 style="color:red">已知问题：Safari浏览器抛出一个‘RangeError’代替返回null,当它试图去解析一个违法的日期。唯一可靠的方式去防止（monkey patch指的是在运行时动态替换）</h5>
+<textarea style="width: 600px; height: 200px">
+var _DatetoJSON = Date.prototype.toJSON;
+Date.prototype.toJSON = function() {
+    try {
+        return _DatetoJSON.call(this);
+    } catch(e) {
+        if (e instanceof RangeError) {
+            return null;
+        }
+        throw e;
+    }
+};
+</textarea>
+<h4>使用方法：angular.toJson(obj, pretty); pretty如果设置[true], 则以空格以及换行的形式展示</h4>
+
+<div>
+    <h5>实例一：</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toJson()" value="点击序列化"/></p>
+</div>
+</body>

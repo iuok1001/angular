@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="ngFunction">
+<head>
+    <meta charset="UTF-8">
+    <title>bind</title>
+    <script src="../../../static/js/angular.js"></script>
+    <script src="angular.bind.js"></script>
+</head>
+<body ng-controller="MyCtrl as myCtrl">
+<h4>Returns a function which calls function fn bound to self (self becomes the this for fn). You can supply optional
+    args that are prebound to the function. This feature is also known as partial application, as distinguished from
+    function currying.</h4>
+
+<h5 style="color:red">返回一个函数</h5>
+<h4>使用方法：angular.bind(self, fn, args);</h4>
+
+<div>
+    <h5>实例一：</h5>
+    <p>详情看控制台打印日志：<input type="button" ng-click="myCtrl.toBind()" value="点击绑定"/></p>
+</div>
+</body>
